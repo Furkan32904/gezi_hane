@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sehirs",
+  "info": {
+    "singularName": "sehir",
+    "pluralName": "sehirs",
+    "displayName": "Sehir"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Ad": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Ulke": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Kisa_Bilgi": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "mekans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mekan.mekan",
+      "mappedBy": "sehir"
+    }
+  }
+}

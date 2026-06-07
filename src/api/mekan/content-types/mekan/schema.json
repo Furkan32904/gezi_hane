@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mekans",
+  "info": {
+    "singularName": "mekan",
+    "pluralName": "mekans",
+    "displayName": "Mekan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Mekan_Adi": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Aciklama": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Puan": {
+      "type": "decimal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Kapak_Resmi": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sehir": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sehir.sehir",
+      "inversedBy": "mekans"
+    }
+  }
+}
